@@ -14,7 +14,6 @@ class SearchSuggestionSystem {
         }
         node = node[char];
 
-        // Maintain a list of suggestions at each node (limited to 3)
         if (!node.suggestions) {
           node.suggestions = [];
         }
@@ -45,4 +44,5 @@ class SearchSuggestionSystem {
 const products = ['mobile', 'mouse', 'moneypot', 'monitor', 'mousepad'];
 const searchWord = 'mouse';
 const suggestionSystem = new SearchSuggestionSystem(products);
+console.log(suggestionSystem.getSuggestions(searchWord));
 console.log(suggestionSystem.getSuggestions(searchWord));
